@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+</head>
+
+<body>
+
+	<div class="container">
+	
+		<div id="controls" class="d-flex">
+		
+			<input type="number" 
+			min="0" 
+			max="100" 
+			step="1" 
+			class="js-input form-control col-md-6" />
+			
+			<button 
+			type="button" 
+			class="btn btn-primary ml-2 js-btn-create" 
+			data-action="create">
+				Создать
+			</button>
+			
+			<button 
+			type="button" 
+			class="btn btn-danger ml-2 js-btn-destroy"
+			data-action="destroy">
+				Очистить
+			</button>
+			
+		</div>
+		
+		<div id="boxes" class="js-boxes"></div>
+		
+		<hr>
+		
+		<form id="search-form">
+			<input
+			type="text"
+			name="query"
+			autocomplete="off"
+			class="form-control col-md-6 mb-3 js-input-query"
+			placeholder="Поиск изображений..."/>
+		</form>
+		
+		<ul class="list-images js-list-images"></ul>
+		
+	</div>
+	
+	<div class="js-wrapper-modal wrapper-modal hide">
+		<div class="js-popup popup">
+			<div class="js-close-popup close-popup">
+				&#10006;
+			</div>
+			<img src="" class="img-popup js-img-popup" alt="img">
+		</div>
+	</div>
+	
+	<div class="box-loader js-box-loader hide">
+		<img src="img/loader.svg" alt="loader">
+	</div>
+	
+	<script src="js/StringBuilder.js"></script>
+	<script src="js/script.js"></script>
+	
+</body>
+</html>
